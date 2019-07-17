@@ -1,0 +1,15 @@
+	var canvas = document.getElementById('canvasID')
+	var ctx = canvas.getContext('2d') 
+var image= new Image()
+image.onload=function(){
+	setInterval(move , 100)
+}
+image.src='IMG.png';
+var x=10
+function move(){
+	if (x<200)
+		x +=5;
+	else
+		x=10;
+	ctx.clearRect(0,0, canvas.width, canvas.height);
+	ctx.drawImage(image , x , 10,200,200)
